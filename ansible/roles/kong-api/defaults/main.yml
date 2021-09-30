@@ -92,6 +92,7 @@ surveys_service_prefix: /surveys
 user_extension_prefix: /user-extension
 uci_admin_prefix: /uci
 notification_service_prefix: /notification
+event_prefix: /event
 
 # Service URLs
 knowledge_mw_service_url: "http://knowledge-mw-service:5000"
@@ -7229,7 +7230,7 @@ kong_apis:
       config.allowed_payload_size: "{{ small_request_size_limit }}"
       
   - name: readContentEvent
-    uris: "{{ content_prefix }}/event/v4/read"
+    uris: "{{ event_prefix }}/v4/read"
     upstream_url: "{{ content_service_url }}/event/v4/read"
     strip_uri: true
     plugins:
