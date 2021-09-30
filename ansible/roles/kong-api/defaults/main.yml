@@ -7242,8 +7242,7 @@ kong_apis:
       config.limit_by: ip
     - name: request-size-limiting
       config.allowed_payload_size: "{{ small_request_size_limit }}"
-	  
-	  
+      
   - name: creatEvent
     uris: "{{ event_prefix }}/v4/create"
     upstream_url: "{{ content_service_url }}/event/v4/create"
@@ -7257,7 +7256,7 @@ kong_apis:
       config.limit_by: ip
     - name: request-size-limiting
       config.allowed_payload_size: "{{ small_request_size_limit }}"
-
+      
   - name: updateEvent
     uris: "{{ event_prefix }}/v4/update"
     upstream_url: "{{ content_service_url }}/event/v4/update"
@@ -7271,8 +7270,7 @@ kong_apis:
       config.limit_by: ip
     - name: request-size-limiting
       config.allowed_payload_size: "{{ small_request_size_limit }}"
-	  
-	  
+      
   - name: publishEvent
     uris: "{{ event_prefix }}/v4/publish"
     upstream_url: "{{ content_service_url }}/event/v4/publish"
@@ -7286,8 +7284,7 @@ kong_apis:
       config.limit_by: ip
     - name: request-size-limiting
       config.allowed_payload_size: "{{ small_request_size_limit }}"
-	  
-	  
+      
   - name: joinEventModerator
     uris: "{{ event_prefix }}/v4/join/moderator"
     upstream_url: "{{ content_service_url }}/event/v4/join/moderator"
@@ -7301,7 +7298,7 @@ kong_apis:
       config.limit_by: ip
     - name: request-size-limiting
       config.allowed_payload_size: "{{ small_request_size_limit }}"
-	  
+      
   - name: joinEventAttendee
     uris: "{{ event_prefix }}/v4/join/attendee"
     upstream_url: "{{ content_service_url }}/event/v4/join/attendee"
@@ -7315,7 +7312,7 @@ kong_apis:
       config.limit_by: ip
     - name: request-size-limiting
       config.allowed_payload_size: "{{ small_request_size_limit }}"
-	  
+      
   - name: searchEvent
     uris: "{{ event_prefix }}/v3/search"
     upstream_url: "{{ content_service_url }}/v3/search"
