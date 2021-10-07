@@ -7329,7 +7329,7 @@ kong_apis:
       config.allowed_payload_size: "{{ small_request_size_limit }}"
   
   - name: eventUserList
-    uris: "{{ event_service_prefix }}/v1/user/list"
+    uris: "{{ event_prefix }}/v1/user/list"
     upstream_url: "{{ lms_service_url }}/v1/user/event/list"
     strip_uri: true
     plugins:
@@ -7347,7 +7347,7 @@ kong_apis:
       config.allowed_payload_size: "{{ small_request_size_limit }}"	
   
   - name: eventEnrolment
-    uris: "{{ event_service_prefix }}/v1/enrol"
+    uris: "{{ event_prefix }}/v1/enrol"
     upstream_url: "{{ lms_service_url }}/v1/event/enroll"
     strip_uri: true
     plugins:
@@ -7365,7 +7365,7 @@ kong_apis:
       config.allowed_payload_size: "{{ small_request_size_limit }}"
    
   - name: eventUnEnrolment
-    uris: "{{ event_service_prefix }}/v1/unenroll"
+    uris: "{{ event_prefix }}/v1/unenroll"
     upstream_url: "{{ lms_service_url }}/v1/event/unenroll"
     strip_uri: true
     plugins:
@@ -7383,7 +7383,7 @@ kong_apis:
       config.allowed_payload_size: "{{ small_request_size_limit }}"
     
   - name: eventParticipantsList
-    uris: "{{ event_service_prefix }}/v1/participants/list"
+    uris: "{{ event_prefix }}/v1/participants/list"
     upstream_url: "{{ lms_service_url }}/v1/event/participants/list"
     strip_uri: true
     plugins:
@@ -7401,7 +7401,7 @@ kong_apis:
       config.allowed_payload_size: "{{ small_request_size_limit }}"
      
   - name: eventUserStateRead
-    uris: "{{ event_service_prefix }}/v1/user/state/read"
+    uris: "{{ event_prefix }}/v1/user/state/read"
     upstream_url: "{{ lms_service_url }}/v1/user/event/state/read"
     strip_uri: true
     plugins:
@@ -7419,7 +7419,7 @@ kong_apis:
       config.allowed_payload_size: "{{ small_request_size_limit }}"
      
   - name: eventUserStateUpdate
-    uris: "{{ event_service_prefix }}/v1/user/state/update"
+    uris: "{{ event_prefix }}/v1/user/state/update"
     upstream_url: "{{ lms_service_url }}/v1/user/event/state/update"
     strip_uri: true
     plugins:
