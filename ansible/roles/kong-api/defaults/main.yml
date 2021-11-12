@@ -7456,7 +7456,7 @@ kong_apis:
       
   - name: eventBBBWebHook
     uris: "{{ event_prefix }}/v1/attendance/webhook/bbb"
-    upstream_url: "{{ lms_service_url }}/v1/event/attendance/webhook/bigbluebutton"
+    upstream_url: "{{ lms_service_url }}/v1/event/attendance/webhook"
     strip_uri: true
     plugins:
     - name: jwt
