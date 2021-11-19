@@ -7437,7 +7437,7 @@ kong_apis:
       config.allowed_payload_size: "{{ small_request_size_limit }}"
       
   - name: eventAttendanceRead
-    uris: "{{ event_prefix }}/v1/attendance/read"
+    uris: "{{ course_service_prefix }}/v1/attendance/read"
     upstream_url: "{{ lms_service_url }}/v1/event/attendance/read"
     strip_uri: true
     plugins:
