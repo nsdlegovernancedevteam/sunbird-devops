@@ -7467,3 +7467,17 @@ kong_apis:
       config.limit_by: ip
     - name: request-size-limiting
       config.allowed_payload_size: "{{ small_request_size_limit }}"
+      
+  - name: eventBBBRecordWebHook
+    uris: "{{ event_prefix }}/v1/recording/webhook"
+    upstream_url: "{{ lms_service_url }}v1/event/recording/webhook"
+    strip_uri: true
+    plugins:
+    - name: cors
+    - "{{ statsd_pulgin }}"
+    - name: rate-limiting
+      config.policy: local
+      config.hour: "{{ medium_rate_limit_per_hour }}"
+      config.limit_by: ip
+    - name: request-size-limiting
+      config.allowed_payload_size: "{{ small_request_size_limit }}"    
