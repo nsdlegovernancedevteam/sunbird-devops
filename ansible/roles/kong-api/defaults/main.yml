@@ -7470,7 +7470,7 @@ kong_apis:
       
   - name: eventBBBRecordWebHook
     uris: "{{ event_prefix }}/v1/recording/webhook"
-    upstream_url: "{{ lms_service_url }}v1/event/recording/webhook"
+    upstream_url: "{{ lms_service_url }}/v1/event/recording/webhook"
     strip_uri: true
     plugins:
     - name: cors
