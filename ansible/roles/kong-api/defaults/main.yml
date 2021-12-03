@@ -7329,7 +7329,7 @@ kong_apis:
       config.allowed_payload_size: "{{ small_request_size_limit }}"
   
   - name: eventUserList
-    uris: "{{ event_prefix }}/v1/user/list"
+    uris: "{{ event_prefix }}/v1/user/enrollment/list"
     upstream_url: "{{ lms_service_url }}/v1/user/event/list"
     strip_uri: true
     plugins:
