@@ -7480,4 +7480,32 @@ kong_apis:
       config.hour: "{{ medium_rate_limit_per_hour }}"
       config.limit_by: ip
     - name: request-size-limiting
-      config.allowed_payload_size: "{{ small_request_size_limit }}"    
+      config.allowed_payload_size: "{{ small_request_size_limit }}" 
+   
+  - name: eventDruidSummary
+    uris: "{{ event_prefix }}/v1/summary"
+    upstream_url: "{{ lms_service_url }}/v1/event/summary"
+    strip_uri: true
+    plugins:
+    - name: cors
+    - "{{ statsd_pulgin }}"
+    - name: rate-limiting
+      config.policy: local
+      config.hour: "{{ medium_rate_limit_per_hour }}"
+      config.limit_by: ip
+    - name: request-size-limiting
+      config.allowed_payload_size: "{{ small_request_size_limit }}"  
+   
+  - name: courseDruidSummary
+    uris: "{{ event_prefix }}/v1/summary"
+    upstream_url: "{{ lms_service_url }}/v1/course/summary"
+    strip_uri: true
+    plugins:
+    - name: cors
+    - "{{ statsd_pulgin }}"
+    - name: rate-limiting
+      config.policy: local
+      config.hour: "{{ medium_rate_limit_per_hour }}"
+      config.limit_by: ip
+    - name: request-size-limiting
+      config.allowed_payload_size: "{{ small_request_size_limit }}"  
