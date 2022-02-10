@@ -93,6 +93,8 @@
     name: "{{ mongodb_pymongo_package }}"
   when: not mongodb_pymongo_from_pip
 
+- debug: msg= "check: {{ mongodb_pymongo_deps }}"
+
 - name: Install PIP
   apt:
     pkg: "{{ mongodb_pymongo_deps }}"
