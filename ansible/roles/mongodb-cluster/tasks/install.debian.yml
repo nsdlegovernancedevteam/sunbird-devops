@@ -94,7 +94,7 @@
   when: not mongodb_pymongo_from_pip
 
 - debug: 
-   msg: "{{ mongodb_pymongo_deps }}"
+   msg: "{{ ansible_facts }}"
 
 - name: Install PIP
   apt:
