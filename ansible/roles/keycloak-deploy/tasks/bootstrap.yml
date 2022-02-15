@@ -38,7 +38,7 @@
     name: "{{ item }}"
     update_cache: true
   with_items:
-    - python-pip
+    - python3-pip
     - python-setuptools
   run_once: true
 
