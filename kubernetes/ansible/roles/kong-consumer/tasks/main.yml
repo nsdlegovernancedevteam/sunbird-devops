@@ -1,6 +1,6 @@
 ---
 - name: Ensure pip is installed
-  apt: name=python-pip
+  apt: name=python3-pip
   when: ansible_os_family == 'Debian'
 
 - name: Ensure PyJWT is installed
