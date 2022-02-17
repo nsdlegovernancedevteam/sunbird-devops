@@ -49,7 +49,7 @@
   run_once: true
 
 - name: Initialize python library to run keycloak bootstrap script
-  shell: cd /tmp/python-keycloak-0.12.0 && python setup.py install
+  shell: cd /tmp/python-keycloak-0.12.0 && python3 setup.py install
   run_once: true
 
 - name: Save keycloak vars to json
