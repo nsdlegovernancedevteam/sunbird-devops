@@ -680,14 +680,14 @@ get_x_authenticated_token
 #create_default_licenses
 #create_default_channel_license
 create_other_categories
-system_settings
-create_users
-assign_roles
-create_framework
-create_framework_categories
-create_framework_terms
-publish_framework
-tenant_preference
+#system_settings
+#create_users
+#assign_roles
+#create_framework
+#create_framework_categories
+#create_framework_terms
+#publish_framework
+#tenant_preference
 create_location
 
 printf "\n\n"
