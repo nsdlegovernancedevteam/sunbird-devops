@@ -675,10 +675,10 @@ printf "\n\n"
 
 cassandra_forms
 get_x_authenticated_token
-//create_organisation
-//create_master_categories
-//create_default_licenses
-//create_default_channel_license
+#create_organisation
+#create_master_categories
+#create_default_licenses
+#create_default_channel_license
 create_other_categories
 system_settings
 create_users
