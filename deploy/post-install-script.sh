@@ -14,7 +14,7 @@ cassandra=$9
 knowledge_platform_tag=${10}
 forms=https://sunbirdpublic.blob.core.windows.net/installation/forms.csv
 x_authenticated_token=""
-organisation=""
+organisation="0134821360722165762"
 creator=""
 reviewer=""
 orgadmin=""
@@ -675,10 +675,10 @@ printf "\n\n"
 
 cassandra_forms
 get_x_authenticated_token
-create_organisation
-create_master_categories
-create_default_licenses
-create_default_channel_license
+//create_organisation
+//create_master_categories
+//create_default_licenses
+//create_default_channel_license
 create_other_categories
 system_settings
 create_users
