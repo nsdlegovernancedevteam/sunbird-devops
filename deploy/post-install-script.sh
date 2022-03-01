@@ -14,7 +14,7 @@ cassandra=$9
 knowledge_platform_tag=${10}
 forms=https://sunbirdpublic.blob.core.windows.net/installation/forms.csv
 x_authenticated_token=""
-organisation=""
+organisation="0134851060234403848"
 creator=""
 reviewer=""
 orgadmin=""
@@ -46,21 +46,21 @@ get_x_authenticated_token(){
 
 create_organisation(){
     # Create one organisation as default
-    printf "\n\n"
-    echo -e "\e[0;32m${bold}Creating default organisation ${normal}"
-    organisation=$(curl -sS -XPOST "${proto}://${domain_name}/api/org/v1/create" -H 'Accept: application/json' -H 'Content-Type: application/json' \
-    -H "X-Authenticated-User-Token: ${x_authenticated_token}" \
-    -H "Authorization: Bearer ${core_vault_sunbird_api_auth_token}" \
-    -d '{
-       "request":{
-           "orgName":"Sunbird Org",
-           "description":"Default Organisation for Sunbird",
-           "isRootOrg": true,
-           "channel": "sunbird",
-           "organisationType": "board",
-           "isTenant": true
-       }
-    }' | jq -r .result.organisationId)
+ ###   printf "\n\n"
+ ###   echo -e "\e[0;32m${bold}Creating default organisation ${normal}"
+ ###   organisation=$(curl -sS -XPOST "${proto}://${domain_name}/api/org/v1/create" -H 'Accept: application/json' -H 'Content-Type: application/json' \
+ ###   -H "X-Authenticated-User-Token: ${x_authenticated_token}" \
+ ###   -H "Authorization: Bearer ${core_vault_sunbird_api_auth_token}" \
+ ###   -d '{
+ ###      "request":{
+ ###          "orgName":"Sunbird Org",
+ ###          "description":"Default Organisation for Sunbird",
+ ###          "isRootOrg": true,
+ ###          "channel": "sunbird",
+ ###          "organisationType": "board",
+ ###         "isTenant": true
+ ###      }
+ ###   }' | jq -r .result.organisationId)
     echo "organisationId: ${organisation}"
 
     echo -e "\e[0;32m${bold}Creating ntp organisation for login page ${normal}"
